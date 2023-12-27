@@ -14,6 +14,7 @@
 		0FA0C88C2B3CB09800D84872 /* PetSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C88B2B3CB09800D84872 /* PetSaveTests.swift */; };
 		0FA0C8962B3CB09800D84872 /* PetSaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8952B3CB09800D84872 /* PetSaveUITests.swift */; };
 		0FA0C8982B3CB09800D84872 /* PetSaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8972B3CB09800D84872 /* PetSaveUITestsLaunchTests.swift */; };
+		0FA0C8A72B3CB12800D84872 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8A62B3CB12800D84872 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0FA0C8912B3CB09800D84872 /* PetSaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetSaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA0C8952B3CB09800D84872 /* PetSaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSaveUITests.swift; sourceTree = "<group>"; };
 		0FA0C8972B3CB09800D84872 /* PetSaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0FA0C8A62B3CB12800D84872 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,9 @@
 		0FA0C8792B3CB09300D84872 /* PetSave */ = {
 			isa = PBXGroup;
 			children = (
-				0FA0C87A2B3CB09300D84872 /* PetSaveApp.swift */,
+				0FA0C8A42B3CB0F300D84872 /* App */,
+				0FA0C8A52B3CB10700D84872 /* Core */,
 				0FA0C87C2B3CB09300D84872 /* ContentView.swift */,
-				0FA0C87E2B3CB09800D84872 /* Assets.xcassets */,
 				0FA0C8802B3CB09800D84872 /* Preview Content */,
 			);
 			path = PetSave;
@@ -125,6 +127,23 @@
 				0FA0C8972B3CB09800D84872 /* PetSaveUITestsLaunchTests.swift */,
 			);
 			path = PetSaveUITests;
+			sourceTree = "<group>";
+		};
+		0FA0C8A42B3CB0F300D84872 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0FA0C87A2B3CB09300D84872 /* PetSaveApp.swift */,
+				0FA0C87E2B3CB09800D84872 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0FA0C8A52B3CB10700D84872 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0FA0C8A62B3CB12800D84872 /* APIConstants.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			files = (
 				0FA0C87D2B3CB09300D84872 /* ContentView.swift in Sources */,
 				0FA0C87B2B3CB09300D84872 /* PetSaveApp.swift in Sources */,
+				0FA0C8A72B3CB12800D84872 /* APIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
