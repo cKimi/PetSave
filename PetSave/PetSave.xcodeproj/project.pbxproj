@@ -41,6 +41,9 @@
 		0FA0C8E32B3CC82D00D84872 /* AnimalContactLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8E22B3CC82D00D84872 /* AnimalContactLink.swift */; };
 		0FA0C8E52B3CC99400D84872 /* AnimalLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8E42B3CC99400D84872 /* AnimalLocationView.swift */; };
 		0FA0C8E72B3CC9B500D84872 /* AnimalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8E62B3CC9B500D84872 /* AnimalHeaderView.swift */; };
+		0FA0C8EA2B3CCCAD00D84872 /* AnimalsNearYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8E92B3CCCAD00D84872 /* AnimalsNearYou.swift */; };
+		0FA0C8EE2B3CCD6E00D84872 /* AnimalSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8ED2B3CCD6E00D84872 /* AnimalSearchType.swift */; };
+		0FA0C8F02B3CCEBF00D84872 /* AnimalSearchAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0C8EF2B3CCEBF00D84872 /* AnimalSearchAge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		0FA0C8E22B3CC82D00D84872 /* AnimalContactLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalContactLink.swift; sourceTree = "<group>"; };
 		0FA0C8E42B3CC99400D84872 /* AnimalLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalLocationView.swift; sourceTree = "<group>"; };
 		0FA0C8E62B3CC9B500D84872 /* AnimalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalHeaderView.swift; sourceTree = "<group>"; };
+		0FA0C8E92B3CCCAD00D84872 /* AnimalsNearYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsNearYou.swift; sourceTree = "<group>"; };
+		0FA0C8ED2B3CCD6E00D84872 /* AnimalSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchType.swift; sourceTree = "<group>"; };
+		0FA0C8EF2B3CCEBF00D84872 /* AnimalSearchAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchAge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,8 @@
 				0FA0C8A42B3CB0F300D84872 /* App */,
 				0FA0C8A52B3CB10700D84872 /* Core */,
 				0FA0C8D92B3CC63700D84872 /* AnimalsDetails */,
+				0FA0C8E82B3CCC9200D84872 /* AnimalsNearYou */,
+				0FA0C8EB2B3CCD4100D84872 /* Search */,
 				0FA0C87C2B3CB09300D84872 /* ContentView.swift */,
 				0FA0C8802B3CB09800D84872 /* Preview Content */,
 			);
@@ -312,6 +320,31 @@
 			path = AnimalsDetails;
 			sourceTree = "<group>";
 		};
+		0FA0C8E82B3CCC9200D84872 /* AnimalsNearYou */ = {
+			isa = PBXGroup;
+			children = (
+				0FA0C8E92B3CCCAD00D84872 /* AnimalsNearYou.swift */,
+			);
+			path = AnimalsNearYou;
+			sourceTree = "<group>";
+		};
+		0FA0C8EB2B3CCD4100D84872 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0FA0C8EC2B3CCD4D00D84872 /* Model */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0FA0C8EC2B3CCD4D00D84872 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FA0C8ED2B3CCD6E00D84872 /* AnimalSearchType.swift */,
+				0FA0C8EF2B3CCEBF00D84872 /* AnimalSearchAge.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -447,14 +480,17 @@
 				0FA0C8AC2B3CB22700D84872 /* PetSave.xcdatamodeld in Sources */,
 				0FA0C87D2B3CB09300D84872 /* ContentView.swift in Sources */,
 				0FA0C8C32B3CB9A700D84872 /* PhotoSizes.swift in Sources */,
+				0FA0C8F02B3CCEBF00D84872 /* AnimalSearchAge.swift in Sources */,
 				0FA0C8DD2B3CC68E00D84872 /* AnimalDetailRow.swift in Sources */,
 				0FA0C8CD2B3CBACA00D84872 /* AdoptionStatus.swift in Sources */,
 				0FA0C8D62B3CBCD100D84872 /* AddressFetcher.swift in Sources */,
 				0FA0C8BF2B3CB8DB00D84872 /* Age.swift in Sources */,
 				0FA0C8CB2B3CBA9800D84872 /* APIColors.swift in Sources */,
 				0FA0C8D32B3CBC1700D84872 /* User.swift in Sources */,
+				0FA0C8EE2B3CCD6E00D84872 /* AnimalSearchType.swift in Sources */,
 				0FA0C8B72B3CB77C00D84872 /* Details.swift in Sources */,
 				0FA0C8E72B3CC9B500D84872 /* AnimalHeaderView.swift in Sources */,
+				0FA0C8EA2B3CCCAD00D84872 /* AnimalsNearYou.swift in Sources */,
 				0FA0C87B2B3CB09300D84872 /* PetSaveApp.swift in Sources */,
 				0FA0C8E32B3CC82D00D84872 /* AnimalContactLink.swift in Sources */,
 				0FA0C8DB2B3CC64C00D84872 /* AnimalDetailsView.swift in Sources */,
