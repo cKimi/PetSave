@@ -14,12 +14,16 @@ protocol RequestManagerProtocol {
 class RequestManager: RequestManagerProtocol {
     let apiManager: APIManagerProtocol
     let parser: DataParserProtocol
+    let accessTokenManager: AccessTokenManagerProtocol
     
     /// 1. You set up the initializer and set apiManager with a default value.
-    init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser()) {
+    init(apiManager: APIManagerProtocol = APIManager(), 
+         parser: DataParserProtocol = DataParser(),
+         accessTokenManager: AccessTokenManagerProtocol = AccessTokenManager()) {
         /// 2. Navigate to Core/Data/API/Parser, and you'll see DataParser. It conforms to a protocol DataParserProtocol that implements a method that takes in Data and returns a generic Decodable. Then it uses JSONDecoder to decode Data into a Decodable.
         self.apiManager = apiManager
         self.parser = parser
+        self.accessTokenManager = accessTokenManager
     }
     
     func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T {
@@ -35,13 +39,17 @@ class RequestManager: RequestManagerProtocol {
     }
     
     func requestAccessToken() async throws -> String {
-        /// 1. Fetch the token based on the AuthTokenRequest. It returns either a Data object or throws an Error.
+        /// 1. If the saved token is valid, isTokenValid returns true.
+        if accessTokenManager.isTokenValid() {
+            return accessTokenManager.fetchToken()
+        }
+        /// 2. If there is no saved token, it fetches the token again.
         let data = try await apiManager.requestToken()
-        
-        /// 2. Parse the token and map it to APIToken.
         let token: APIToken = try parser.parse(data: data)
         
-        /// 3. Return the authentication token.
+        
+        /// 3. Then, it refreshes the authentication token stored in UserDefaults
+        try accessTokenManager.refreshWith(apiToken: token)
         return token.bearerAccessToken
     }
 }
