@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            AnimalsNearYou()
+            AnimalsNearYouView()
                 .tabItem { Label("Near you", systemImage: "location") }
             
             SearchView()
